@@ -9,7 +9,7 @@ Weather data is fetched from [Open-Meteo](https://open-meteo.com/) — a **free,
 ## 🚀 Quick Start
 
 ```bash
-git clone <repository-url>
+git clone  https://github.com/GuyBenzvi/CoastalSportsDashboard.git
 cd <repository-folder>
 python -m venv .venv
 # Windows: .venv\Scripts\activate
@@ -18,21 +18,11 @@ pip install -r requirements.txt
 python etl.py
 streamlit run app.py
 ```
-
-No API keys. No Docker. No external databases. Just clone, install, run.
-
 ---
 
 ## 🌐 API Selection
 
 **API:** [Open-Meteo](https://open-meteo.com/) — Weather Forecast API + Marine API
-
-**Why this API:**
-- Completely free and keyless — no account or token required.
-- Provides hourly wind, precipitation, and wave-height forecasts up to 7 days.
-- Covers all 11 Thai coastal locations accurately (ERA5 + GFS model blend).
-- JSON responses, reliable uptime, and a permissive open-data license.
-- Marine API provides wave height directly — no secondary data join needed.
 
 **Endpoints used:**
 - `https://api.open-meteo.com/v1/forecast` — wind speed (m/s), precipitation (mm/h)
