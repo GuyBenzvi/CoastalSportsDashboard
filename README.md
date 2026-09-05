@@ -277,8 +277,6 @@ The AI proactively: raised edge cases (marine API coverage gaps for near-land co
 
 - Add historical data comparison (week-over-week and seasonal trends).
 - Implement a tidal data layer using a tidal API for more precise surf condition scoring.
-- Add other global water-sports destinations (Bali, Canary Islands, Cape Town).
-- Dockerize for one-command deployment with no Python version dependencies.
-- Extend unit tests to cover transformer QC logic and ETL integration.
-- Cache at the processed layer too (not just raw), to skip re-scoring when raw data hasn't changed.
-- Add push notifications or a daily digest for "Optimal" conditions at a chosen location.
+- Implement a wind direction data layer for more precise kitesurf condition scoring. 
+- Add other global water-sports hubs (Bali, Canary Islands, Cape Town).
+- Personelize optimal weather condition to better suit user level. 
