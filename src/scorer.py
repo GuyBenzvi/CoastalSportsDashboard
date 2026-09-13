@@ -49,15 +49,12 @@ def _component_score(value: float, min_r: float, max_r: float, extreme: float) -
     if min_r <= value <= max_r:
         return 1.0
 
-    if value < min_r:
-        # How far below the lower boundary?
-        lower_extreme = max(0.0, min_r - (extreme - max_r)) if extreme > max_r else 0.0
-        if value <= lower_extreme:
-            return 0.0
-        if min_r == lower_extreme:
-            return 0.0
-        return (value - lower_extreme) / (min_r - lower_extreme)
-
+        if min_r <= value <= max_r:
+        return 1.0
+    
+    if value < min_r and min_r > 0:
+            return (value / min_r)
+ 
     # value > max_r
     if value >= extreme:
         return 0.0
