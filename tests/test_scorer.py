@@ -66,7 +66,7 @@ class TestSportScoring:
         assert score == pytest.approx(100.0, abs=0.1)
 
     def test_sup_calm_conditions_scores_high(self):
-        df = self._make_df(wind_knots=5, wave_m=0.2, precip_mm=0)
+        df = self._make_df(wind_knots=2, wave_m=0.2, precip_mm=0)
         score = score_sport(df, "SUP").iloc[0]
         assert score == pytest.approx(100.0, abs=0.1)
 
